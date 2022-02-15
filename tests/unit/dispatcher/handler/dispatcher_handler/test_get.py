@@ -1,6 +1,6 @@
 from unittest import mock
 
-from src.core.dispatcher.handler import DispatcherHandler
+from src.dispatcher.handler import DispatcherHandler
 
 
 @mock.patch.object(DispatcherHandler, 'write')

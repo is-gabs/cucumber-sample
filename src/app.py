@@ -1,6 +1,6 @@
 from tornado.web import Application
 
-from src.core.dispatcher.handler import DispatcherHandler
+from src.dispatcher.handler import DispatcherHandler
 
 
 def create_app() -> Application:

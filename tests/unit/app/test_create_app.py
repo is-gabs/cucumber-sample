@@ -1,10 +1,10 @@
 from unittest import mock
 
-from src.core.app import create_app
-from src.core.dispatcher.handler import DispatcherHandler
+from src.app import create_app
+from src.dispatcher.handler import DispatcherHandler
 
 
-@mock.patch('src.core.app.Application')
+@mock.patch('src.app.Application')
 def test_should_return_application_instance(
     mock_application
 ):
