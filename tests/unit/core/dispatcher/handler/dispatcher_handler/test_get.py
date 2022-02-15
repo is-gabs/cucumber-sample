@@ -11,4 +11,4 @@ def test_should_call_write_method(mock_write):
         request=mock.MagicMock()
     ).get()
 
-    mock_write.assert_called_once_with()
+    mock_write.assert_called_once_with({'message': 'hello'})

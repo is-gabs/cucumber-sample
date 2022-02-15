@@ -4,4 +4,4 @@ from tornado.web import RequestHandler
 class DispatcherHandler(RequestHandler):
 
     def get(self):
-        self.write()
+        self.write({'message': 'hello'})
