@@ -5,3 +5,9 @@ services:
     image: redis:alpine
     ports:
       - "6379:6379"
+
+  api:
+    build: .
+    command: [poetry, run, python, run.py]
+    ports:
+      - "8000:8000"
