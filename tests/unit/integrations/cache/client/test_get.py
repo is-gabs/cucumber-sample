@@ -9,7 +9,18 @@ def test_should_return_client_get_value(
     result = cache_client.get(name='name')
 
     mock_client.get.assert_called_once_with(name='name')
-    assert result == mock_client.get.return_value
+    assert result == mock_client.get.return_value.decode.return_value
+
+
+def test_should_return_default_when_none_from_get(
+    cache_client
+):
+    mock_client = cache_client._client
+    mock_client.get.return_value = None
+
+    result = cache_client.get(name='name', default='default')
+
+    assert result == 'default'
 
 
 def test_should_return_default_when_raise_redis_error(

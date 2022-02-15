@@ -19,3 +19,6 @@ test_unit: clean
 
 requirements: clean
 	@poetry install
+
+run: clean
+	@poetry run python run.py

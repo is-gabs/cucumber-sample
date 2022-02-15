@@ -15,6 +15,10 @@ class Client:
     def get(self, name: str, default: Optional[str] = None) -> Optional[str]:
         try:
             result = self._client.get(name=name)
+            if result:
+                result = result.decode()
+            else:
+                result = default
         except RedisError:
             result = default
 
